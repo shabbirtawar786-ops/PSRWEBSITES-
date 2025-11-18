@@ -1,0 +1,107 @@
+:root {
+  --primary: #5a0f22;
+  --accent: #b52b4a;
+  --light: #f8f5f6;
+}
+
+/* ===== HERO SECTION ===== */
+.contact-hero {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 80px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 10px 25px rgba(90, 15, 34, 0.25);
+}
+
+.contact-hero .hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contact-hero .hero-content p {
+  font-size: 1.1rem;
+  color: #fcdce3;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-section {
+  background: var(--light);
+  padding: 80px 20px;
+}
+
+.contact-container {
+  max-width: 700px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+.contact-container h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-desc {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* ===== FORM STYLING ===== */
+.form-group {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* ===== BUTTON ===== */
+.btn-send {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-send:hover {
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  transform: translateY(-3px);
+}
+
+/* ===== FORM STATUS ===== */
+#form-status {
+  margin-top: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

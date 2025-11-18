@@ -1,0 +1,7 @@
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  section { padding: 40px 20px !important; }
+  img { max-width: 100%; height: auto; }
+  h1,h2,h3 { font-size: 1.4rem; }
+}

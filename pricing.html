@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P.S.R.Computers - Home</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css">
+
+  <link rel="stylesheet" href="pricing.css" />
+</head>
+
+<body class="luxury-mode">
+
+  <!-- NAVBAR -->
+<header>
+  <div class="nav-blur">
+    <div class="container nav-flex">
+      <div class="brand">
+        <img src="images/logo.png" alt="PSRComputers Logo" class="logo" />
+        <span class="company-name">P.S.R.Computers</span>
+      </div>
+
+      <ul class="nav-links" id="navbar-links">
+        <li><a href="index.html">Home</a></li>
+
+        <!-- Product Dropdown -->
+        <li class="dropdown">
+          <a href="#">Product <i class="fas fa-caret-down dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="paysoft.html">Payroll Management</a></li>
+            <li><a href="contax.html">TDS Management (26Q & 24Q)</a></li>
+            <li><a href="exam.html">Exam Management</a></li>
+            <li><a href="fee.html">Fee Management</a></li>
+            <li><a href="library.html">Library Management</a></li>
+            <li><a href="leavesoft.html">Leave Management</a></li>
+            <li><a href="stusoft.html">Student Management</a></li>
+            <li><a href="inventory.html">Inventory Management</a></li>
+          </ul>
+        </li>
+
+        <!-- About Dropdown -->
+        <li class="dropdown">
+          <a href="#">About <i class="fas fa-caret-down dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="company.html">Company</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
+          </ul>
+        </li>
+
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contactus.html">ContactUs</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+<button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+</button>
+
+    </div>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay" tabindex="-1" aria-hidden="true"></div>
+
+ <!-- ======= PRICING HERO ======= -->
+  <section class="pricing-section">
+    <h1>Our Product Pricing</h1>
+    <p class="subheading">Transparent. Flexible. Scalable — choose the perfect plan for your institution.</p>
+
+    <!-- Dropdown -->
+    <div class="dropdown">
+      <button class="dropbtn">Select a Product ▾</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="showProduct('exam')">Exam Tracking</a>
+        <a href="#" onclick="showProduct('fee')">Fee Tracking</a>
+        <a href="#" onclick="showProduct('library')">Library</a>
+        <a href="#" onclick="showProduct('paysoft')">Paysoft</a>
+        <a href="#" onclick="showProduct('contax')">Contax</a>
+        <a href="#" onclick="showProduct('levsoft')">Levsoft</a>
+        <a href="#" onclick="showProduct('stusoft')">Stusoft</a>
+      </div>
+    </div>
+
+    <div id="pricing-table-container"></div>
+  </section>
+
+  <!-- ======= CUSTOM SOLUTION ======= -->
+  <section class="custom-solution">
+    <h2>Need a Custom Solution?</h2>
+    <p>We offer enterprise-level ERP customization and pricing tailored for your institution’s scale and goals.</p>
+    <a href="contactus.html" class="get-in-touch-btn">Get in Touch</a>
+  </section>
+
+ 
+
+  <script src="pricing.js"></script>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init("bXeUZEr67aNH06I_g");
+document.addEventListener("DOMContentLoaded", function () {
+  const forms = document.querySelectorAll(".email-form");
+  forms.forEach(form => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const templateID = form.getAttribute("data-template");
+      const statusBox = form.querySelector(".status-msg");
+      if (statusBox) statusBox.innerHTML = "⏳ Sending...";
+      emailjs.sendForm("service_bqlw25i", templateID, form)
+        .then(() => { if (statusBox) statusBox.innerHTML = "✅ Message sent!"; form.reset(); })
+        .catch(() => { if (statusBox) statusBox.innerHTML = "❌ Error sending email."; });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+
+ <!-- Social bar -->
+  <div class="social-bar" aria-hidden="false">
+    <a href="https://www.linkedin.com/company/p-s-r-computers/" class="linkedin" target="_blank" title="LinkedIn" rel="noopener noreferrer">
+      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+    </a>
+    <!-- <a href="https://instagram.com/your-instagram-id" class="instagram" target="_blank" title="Instagram" rel="noreferrer">
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+    </a> -->
+    <a href="https://facebook.com/your-facebook-id" class="facebook" target="_blank" title="Facebook" rel="noreferrer">
+      <i class="fab fa-facebook-f" aria-hidden="true"></i>
+    </a>
+    <a href="https://twitter.com/your-twitter-id" class="twitter" target="_blank" title="Twitter" rel="noreferrer">
+      <i class="fab fa-twitter" aria-hidden="true"></i>
+    </a>
+  </div>
+  
+  <!-- WhatsApp Floating Button
+  <div class="whatsapp-float-btn" aria-hidden="false">
+    <a href="https://wa.me/919811250222" target="_blank" aria-label="Chat on WhatsApp" rel="noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" />
+    </a>
+  </div> -->
+
+  <!-- FOOTER -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="footer-top-glow" aria-hidden="true"></div>
+
+    <div class="footer-content">
+      <!-- Logo & Address -->
+      <div class="footer-col logo-address">
+        <div class="footer-brand">
+          <img src="images/logore.png" alt="PSR Computers Logo" class="footer-logo" />
+          <span class="footer-company-name">P.S.R.Computers</span>
+        </div>
+
+        <address>
+          <h4>Office Address</h4>
+          Plot no. 165, First Floor,<br />
+          Pocket 1, Rohini Sector 25,<br />
+          Delhi 110085
+        </address>
+
+        <a
+          href="https://www.google.com/maps/place/PSR+Computers/@28.7312138,77.0948244,19z/data=!4m6!3m5!1s0x390d06ce44000015:0xd5e8d2a73b5aa58a!8m2!3d28.7312138!4d77.0948244!16s%2Fg%2F11c6ppfjy2"
+          target="_blank"
+          class="map-link"
+          rel="noreferrer"
+          >📍 View on Map</a
+        >
+      </div>
+
+      <!-- Services -->
+      <div class="footer-col footer-services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Payroll Automation</a></li>
+          <li><a href="#">API Integration</a></li>
+          <li><a href="#">IT Consulting</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col contact">
+        <h4>Contact</h4>
+        <div class="contact-info">
+          <div>
+            <strong>Email:</strong><br />
+            <a href="mailto:psrcomputers@gmail.com">psrcomputers@gmail.com</a><br />
+            <a href="mailto:sudeep.palimar@psrcomputers.com">sudeep.palimar@psrcomputers.com</a><br />
+           
+          </div>
+          <div style="margin-top:12px;">
+            <strong>Phone:</strong><br />
+            <a href="tel:+919811250222">+91 9811250222</a>
+          </div>
+        </div>
+
+        <div class="footer-social" aria-label="Social links">
+          <a href="https://linkedin.com" class="icon linkedin" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://instagram.com" class="icon instagram" target="_blank" rel="noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://facebook.com" class="icon facebook" target="_blank" rel="noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="https://twitter.com" class="icon twitter" target="_blank" rel="noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://wa.me/918448663060" class="icon whatsapp" target="_blank" rel="noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="footer-col map-embed">
+        <h4>Location Map</h4>
+        <a
+          href="https://www.google.com/maps/place/PSR+Computers/@28.7312138,77.0948244,19z/data=!4m6!3m5!1s0x390d06ce44000015:0xd5e8d2a73b5aa58a!8m2!3d28.7312138!4d77.0948244!16s%2Fg%2F11c6ppfjy2"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src="images/map.png" alt="Map Preview" class="map-preview" />
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <div class="footer-copyright">
+      © <span id="year" aria-hidden="false"></span> P.S.R.Computers. All Rights Reserved.
+    </div>
+  </footer>
+
+ 
+  <!-- Main script (will be replaced/optimized next) -->
+  <script src="script.js"></script>
+
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init("bXeUZEr67aNH06I_g");
+document.addEventListener("DOMContentLoaded", function () {
+  const forms = document.querySelectorAll(".email-form");
+  forms.forEach(form => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const templateID = form.getAttribute("data-template");
+      const statusBox = form.querySelector(".status-msg");
+      if (statusBox) statusBox.innerHTML = "⏳ Sending...";
+      emailjs.sendForm("service_bqlw25i", templateID, form)
+        .then(() => { if (statusBox) statusBox.innerHTML = "✅ Message sent!"; form.reset(); })
+        .catch(() => { if (statusBox) statusBox.innerHTML = "❌ Error sending email."; });
+    });
+  });
+});
+</script>
+
+</body>
+</html> 
