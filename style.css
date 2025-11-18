@@ -107,7 +107,7 @@ a{color:inherit;text-decoration:none}
 .hero-flex{display:flex;align-items:center;justify-content:space-between;gap:48px;height:100%}
 .hero-content{max-width:570px}
 .hero-content h1{font-size:2.3em;color:#26324b;margin-bottom:16px;line-height:1.15;font-family: "Playfair Display", serif;}
-.hero-content p{font-size:1.3em;color:#444;margin-bottom:26px}
+.hero-content p{font-size:1.3em;color:#444;margin-bottom:26px }
 .hero-image img{width:500px;max-width:100%;border-radius:15px;box-shadow:0 6px 26px #a9a9cf22}
 .read-more{background:var(--primary);color:#fff;border:none;padding:10px 22px;border-radius:8px;cursor:pointer;transition:all .22s}
 .read-more:hover{background:var(--primary-dark);box-shadow:0 0 12px rgba(90,15,34,.45)}
