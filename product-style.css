@@ -58,9 +58,10 @@
   text-align: justify;         /* Perfect aligned para */
   text-justify: inter-word;
   max-width: 620px;
-  hyphens: auto;
+  hyphens: none;
   word-break: normal;
    max-width: 620px !important;
+   overflow-wrap: break-word;
  
 }
 .paysoft-hero .actions {

@@ -27,6 +27,7 @@
   font-weight: 700;
   margin-bottom: 15px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Playfair Display', serif;
 }
 
 .hero-text p {
@@ -35,6 +36,7 @@
   color: #f6d9de;
   max-width: 750px;
   margin: 0 auto;
+  font-family: 'Playfair Display', serif;
 }
 
 /* ===== NEWS SECTION ===== */
@@ -43,6 +45,7 @@
   max-width: 1200px;
   padding: 0 20px;
   text-align: center;
+   
 }
 
 .news-list h2 {
@@ -51,6 +54,7 @@
   margin-bottom: 40px;
   font-weight: 700;
   position: relative;
+  font-family: 'Playfair Display', serif;
 }
 
 .news-list h2::after {
@@ -101,6 +105,7 @@
 .news-info {
   padding: 1.5em;
   text-align: left;
+  
 }
 
 .news-info h3 {
@@ -108,6 +113,7 @@
   font-size: 1.2em;
   font-weight: 700;
   margin-bottom: 0.5em;
+  font-family: 'Playfair Display', serif;
 }
 
 .news-info p {
@@ -161,6 +167,7 @@
   border-radius: 20px;
   font-size: 0.9rem;
   flex-shrink: 0;
+  font-family: 'Playfair Display', serif;
 }
 
 .trending-marquee {
