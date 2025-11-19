@@ -170,6 +170,7 @@
         margin: 0 auto 22px !important;
         max-width: 340px !important;
         text-shadow: 0px 1px 6px rgba(0,0,0,0.4);
+        font-family:  'Outfit', sans-serif;
     }
 
     .read-more {
@@ -249,6 +250,7 @@
   .info-list li {
     font-size: 0.95rem !important;
     justify-content: center !important;
+    font-family:  'Outfit', sans-serif;
   }
 
   .stats {
@@ -446,14 +448,21 @@
   /* ------------------------------------------
      PRODUCT PAGES / DEMO POPUPS
   -------------------------------------------*/
+  @media (max-width: 768px) {
+  .features h2 {
+      margin-bottom: 5px !important;
+  }
+
   .feature-grid {
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
+      margin-top: 5px !important;
+      gap: 15px !important;   /* reduce gap between cards */
   }
 
   .feature {
-    padding: 18px !important;
+      padding: 10px !important;
   }
+}
+
 
 
 
@@ -782,4 +791,136 @@
         padding-top: 0 !important;
         margin-top: 0 !important;
     }
+}
+/* FIX CTA → FOOTER GAP ON MOBILE */
+@media (max-width: 768px) {
+
+  .cta {
+    margin-bottom: 0 !important;
+    padding-bottom: 10px !important;
+  }
+
+  .main-footer {
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+  }
+
+  /* If your CTA wrapper has inner spacing */
+  .cta-box {
+    margin-bottom: 0 !important;
+  }
+}
+/* =============================================
+   REMOVE GAP BETWEEN NEWS HERO & TRENDING STRIP
+   ============================================= */
+   @media (max-width: 768px){
+.news-hero,
+.hero-container {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.trending-strip {
+    margin-top: 0 !important;
+    padding-top: 8px !important;  /* small breathing space */
+}
+
+/* If the <h1> adds extra spacing */
+.news-hero h1 {
+    margin-top: 0 !important;
+}
+
+/* If <p> inside hero adds spacing */
+.news-hero p {
+    margin-bottom: 5px !important;
+}
+   }
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .news-hero {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-container {
+        padding: 15px 6% !important;   /* clean but tight */
+        margin: 0 !important;
+    }
+
+    .trending-strip {
+        margin-top: -5px !important;   /* pulls it upward */
+    }
+}
+
+
+
+
+/* =============================
+   FIX CAROUSEL DOTS ON MOBILE
+   ============================= */
+@media (max-width: 768px) {
+
+    /* Carousel wrapper must be relative */
+    .carousel-wrap {
+        position: relative !important;
+        padding-bottom: 35px !important;  /* space for dots */
+    }
+
+    /* Slider images full width */
+    .carousel-wrap img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    /* DOTS — fixed placement */
+    .dots {
+        position: absolute !important;
+        left: 50% !important;
+        bottom: 10px !important; /* distance under image */
+        transform: translateX(-50%) !important;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        z-index: 20 !important;
+    }
+
+    .dot {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50%;
+        background: #c8c8c8 !important;
+        transition: 0.3s;
+    }
+
+    .dot.active {
+        background: #5a0f22 !important;
+        transform: scale(1.2);
+    }
+}
+@media (max-width: 768px) {
+
+  @media (max-width: 768px) {
+
+  /* Fix hero spacing issue */
+  .hero {
+    padding: 60px 15px 40px !important;
+    margin: 0 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    height: auto !important;
+  }
+
+  /* remove extra background block below heading */
+  .hero::after,
+  .hero::before {
+    display: none !important;
+  }
+
+  /* prevent extra space caused by line separator after hero */
+  .hero + * {
+    margin-top: 10px !important;
+  }
+}
 }

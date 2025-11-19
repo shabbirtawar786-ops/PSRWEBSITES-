@@ -51,7 +51,7 @@
      
 }
 .paysoft-hero p.lead {
- font-size: 1.12rem;
+ font-size: 1.15rem;
   color: var(--text-soft);
   margin-bottom: 26px;
   line-height: 1.75;           /* Cleaner spacing */
@@ -62,6 +62,7 @@
   word-break: normal;
    max-width: 620px !important;
    overflow-wrap: break-word;
+   font-family: 'Outfit', sans-serif; 
  
 }
 .paysoft-hero .actions {
@@ -212,6 +213,7 @@
   padding: 24px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.25s ease;
+   font-family: 'Outfit', sans-serif; 
   
 }
 
@@ -231,6 +233,7 @@
   line-height: 1.6;
   text-align: justify;        /* Professional alignment */
   text-justify: inter-word;
+  font-size: 1.10rem;
 }
 
 /* =========================================
@@ -287,6 +290,7 @@
   margin: 0 auto 25px;
   line-height: 1.7;
   color: #f3e7ea;
+  font-family: 'Outfit', sans-serif; 
 }
 
 .cta-buttons {

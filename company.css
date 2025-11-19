@@ -81,9 +81,10 @@ html {
 
 .section p {
   margin-bottom: 15px;
-  font-size: 1.05rem;
+  font-size: 1.10rem;
   color: #444;
   line-height: 1.8;
+  font-family: 'Outfit', sans-serif;
 }
 
 a {
@@ -155,8 +156,9 @@ a:hover {
 
 .product-card p {
   color: #555;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.6;
+  font-family: 'Outfit', sans-serif;
 }
 
 

@@ -78,6 +78,7 @@
   white-space: nowrap;
   padding-left: 100%;
   animation: scrollText 10s linear infinite;
+  font-family: 'Outfit', sans-serif;
 }
 
 /* ===== NEWS CARD ===== */
@@ -118,9 +119,10 @@
 
 .news-info p {
   color: #444;
-  font-size: 0.96em;
+  font-size: 1.05em;
   margin-bottom: 1em;
   line-height: 1.6;
+  font-family: 'Outfit', sans-serif;
 }
 
 .news-info .btn {
