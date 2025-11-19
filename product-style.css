@@ -235,6 +235,19 @@
   text-justify: inter-word;
   font-size: 1.10rem;
 }
+.features h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 40px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+
+  text-decoration: underline;           /* <-- add this */
+  text-decoration-color: var(--primary-dark); /* <-- same color */
+  text-underline-offset: 6px;           /* better spacing from text */
+}
+
 
 /* =========================================
    CTA SECTION (Maroon Themed)
