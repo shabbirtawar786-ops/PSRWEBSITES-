@@ -415,19 +415,163 @@ body.dark-mode .about-image img {
 @media(max-width:1000px){.footer-content{grid-template-columns:1fr 1fr;gap:30px}.footer-company-name{font-size:1.5rem}}
 @media(max-width:650px){.footer-content{grid-template-columns:1fr;gap:25px}.footer-logo{width:46px}.footer-company-name{font-size:1.4rem}.map-preview{width:100%;max-width:220px}}
 
-/* ---------- COOKIE MODAL ---------- */
-#cookieModal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.07);display:flex;align-items:center;justify-content:center}
-.cookie-modal{background:#fff;border-radius:12px;padding:22px;min-width:300px;max-width:95vw;box-shadow:0 6px 30px rgba(0,0,0,.12)}
-.cookie-switches{background:#f8fafd;border:1px solid #ebebee;border-radius:10px;padding:12px;margin-top:12px}
-.cookie-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.switch{position:relative;display:inline-block;width:36px;height:22px}
-.switch input{opacity:0;width:0;height:0}
-.slider{position:absolute;top:0;left:0;right:0;bottom:0;background:#ccc;border-radius:22px;transition:.25s}
-.slider:before{content:"";position:absolute;left:3px;bottom:3px;width:16px;height:16px;background:#fff;border-radius:50%;transition:.25s}
-.switch input:checked+.slider{background:#25D366}
-.switch input:checked+.slider:before{transform:translateX(14px)}
-.cookie-actions{text-align:center;margin-top:12px}
-.cookie-actions button{padding:8px 18px;border-radius:8px;border:none;margin:0 6px}
+/* ---------- COOKIE MODAL (UPDATED DESIGN) ---------- */
+#cookieModal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+/* Modal box */
+.cookie-modal {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  min-width: 330px;
+  max-width: 420px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  animation: fadeIn 0.35s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Title */
+.cookie-modal h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #5a0f22;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.cookie-modal p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Switch container */
+.cookie-switches {
+  background: #fafafb;
+  border: 1px solid #e5e5ea;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+/* Each row */
+.cookie-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Switch toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #d0d0d0;
+  border-radius: 22px;
+  transition: .25s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  transition: .25s;
+}
+
+.switch input:checked + .slider {
+  background: #5a0f22;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* Action buttons */
+.cookie-actions {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Buttons (main update!) */
+.cookie-actions button {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.25s;
+}
+
+/* Save Preferences */
+.cookie-actions .save {
+  background: #e7cfd6;
+  color: #5a0f22;
+}
+
+.cookie-actions .save:hover {
+  background: #d9b7c0;
+}
+
+/* Accept All */
+.cookie-actions .accept {
+  background: #5a0f22;
+  color: white;
+}
+
+.cookie-actions .accept:hover {
+  background: #7c1430;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* ---------- SMALL FIXES / OVERRIDES ---------- */
 [aria-hidden="true"]{pointer-events:none;opacity:1}
