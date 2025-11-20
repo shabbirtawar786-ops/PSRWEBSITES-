@@ -1,0 +1,24 @@
+{
+  "name": "psrcomputers-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "news.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shabbirtawar786-ops/PSRWEBSITES-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shabbirtawar786-ops/PSRWEBSITES-/issues"
+  },
+  "homepage": "https://github.com/shabbirtawar786-ops/PSRWEBSITES-#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.10"
+  }
+}
