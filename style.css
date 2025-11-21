@@ -388,7 +388,7 @@ body.dark-mode .about-image img {
 .main-footer{background:linear-gradient(135deg,#3a0b18 0%,#5a0f22 100%);color:#fff;position:relative;padding:70px 8% 60px;font-family:'Poppins',sans-serif;overflow:hidden}
 .main-footer::before{content:"";width:100%;height:2px;background:linear-gradient(90deg,#ffffff40,#5a0f22,#ffffff40);position:absolute;top:0;left:0;opacity:.6}
 .footer-content{display:grid;grid-template-columns:1.1fr 1fr 1.1fr 1fr;gap:40px;align-items:start;justify-content:space-between;max-width:1200px;margin:auto}
-.footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:14px;    margin-top: -50px;    /* move upward */}
 .footer-logo{width:52px;height:auto;filter:drop-shadow(0 0 12px rgba(255,255,255,.85));transition:.3s ease}
 .footer-logo:hover{transform:scale(1.06);filter:drop-shadow(0 0 20px rgba(255,255,255,1))}
 .footer-company-name{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;text-transform:uppercase;letter-spacing:.9px;font-size:1.7rem;color:#fff;white-space:nowrap;transition:color .3s ease}
@@ -396,6 +396,7 @@ body.dark-mode .about-image img {
 .logo-address address{font-size:.95rem;line-height:1.6;color:#fff;margin-bottom:10px}
 .map-link{display:inline-block;color:#fff;text-decoration:underline;font-weight:600;transition:color .3s ease}
 .map-link:hover{color:#ffdede}
+
 .footer-services h4{font-weight:700;margin-bottom:10px;color:#fff}
 .footer-services ul{list-style:none;padding:0;margin:0}
 .footer-services li{margin-bottom:6px}
