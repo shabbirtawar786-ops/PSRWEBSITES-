@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/shabbirtawar786-ops/PSRWEBSITES-#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "nodemailer": "^7.0.10"
   }
