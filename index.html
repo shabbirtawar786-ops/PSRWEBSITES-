@@ -455,25 +455,6 @@
   <!-- Main script (will be replaced/optimized next) -->
   <script src="script.js"></script>
 
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-emailjs.init("bXeUZEr67aNH06I_g");
-document.addEventListener("DOMContentLoaded", function () {
-  const forms = document.querySelectorAll(".email-form");
-  forms.forEach(form => {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const templateID = form.getAttribute("data-template");
-      const statusBox = form.querySelector(".status-msg");
-      if (statusBox) statusBox.innerHTML = "⏳ Sending...";
-      emailjs.sendForm("service_bqlw25i", templateID, form)
-        .then(() => { if (statusBox) statusBox.innerHTML = "✅ Message sent!"; form.reset(); })
-        .catch(() => { if (statusBox) statusBox.innerHTML = "❌ Error sending email."; });
-    });
-  });
-});
-</script>
 
 </body>
 </html>

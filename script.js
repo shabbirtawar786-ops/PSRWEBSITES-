@@ -57,36 +57,7 @@ if (heroSlider) {
 }
 
 
-/* =====================================================
-   2️⃣ EMAILJS CONTACT FORM
-   ===================================================== */
-document.getElementById('emailForm')?.addEventListener('submit', e => {
-  e.preventDefault();
 
-  const email = document.getElementById('userEmail').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const statusDiv = document.getElementById('status');
-
-  if (!email || !message) {
-    statusDiv.innerText = 'Please fill in all fields.';
-    return;
-  }
-
-  statusDiv.innerText = 'Sending...';
-
-  emailjs.send('service_abppf7b', 'template_sgy0vac', {
-      from_email: email,
-      message,
-      to_email: 'shabbirtawar786@gmail.com'
-    }, 'bXeUZEr67aNH06I_g')
-    .then(() => {
-      statusDiv.innerText = 'Message sent successfully!';
-      e.target.reset();
-    })
-    .catch(() => {
-      statusDiv.innerText = 'Failed to send message. Please try again.';
-    });
-});
 
 
 /* =====================================================
